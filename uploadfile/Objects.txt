@@ -1,0 +1,33 @@
+Objects
+
+	Create an object teacher with properties: name, subject, experience. Print them.
+	Add a new property age to the teacher object and print it.
+	Update the subject of the teacher from "Maths" to "Science".
+	Delete the experience property from the teacher object.
+	Loop through all properties of the teacher object and print them.
+With Methods
+	Create an object calculator with methods:
+•	add(a, b) → returns sum
+•	sub(a, b) → returns difference
+•	mul(a,b)→returnsmultiplication
+Call all methods and print results.
+
+	Create an object person with properties: name, birthYear, and a method getAge() that returns age (use 2025 - birthYear).
+
+Array of Objects
+	Create an array of 3 objects named products. Each product should have id, name, price. Print all product names.
+	From the above products, print only those whose price is greater than 100.
+	Add a new product to the array and print the updated list.
+
+1. Print All Keys and Values
+const car = { brand: "Toyota", model: "Corolla", year: 2020 };
+
+2. Count the Number of Properties
+const user = { name: "John", age: 30, gender: "male" };
+
+4. Get All Names from Array of Objects
+const students = [
+{ name: "Anu", grade: "A" },
+{ name: "Ben", grade: "B" },
+{ name: "Cathy", grade: "A" }
+];
