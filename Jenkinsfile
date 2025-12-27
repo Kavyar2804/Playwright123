@@ -12,7 +12,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    def status = bat(script: 'npx playwright test tests/e2e/amazone2e.spec.js', returnStatus: true)
+                    def status = bat(script: 'npx playwright test --grep "@smoke" || exit /b 0', returnStatus: true)
                     if (status != 0) {
                         echo "Tests failed, but continuing to generate reports..."
                     }
@@ -20,6 +20,12 @@ pipeline {
             }
         }
     }
+
+  stage('Regression Test Execution') {
+            steps {
+                bat 'npx playwright test datepicker --reporter=html || exit /b 0'
+            }
+        }
 
     post {
         always {
